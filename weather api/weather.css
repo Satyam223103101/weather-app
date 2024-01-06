@@ -1,14 +1,16 @@
 
 
 body {
-  background-image: url(images/back1\ \(3\).jpg);
-
+ 
   background-size: cover;
+  width: 200px;
+  display: block;
   background-repeat: no-repeat;
   background-position: center; 
   margin: 0;
   padding: 0;
   color: rgb(176, 28, 210); 
+  background-image: url(images/back1\ \(3\).jpg);
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -77,6 +79,9 @@ body {
     flex: 1;
     padding: 20px;
     
+  }
+  .temperature{
+    display: column;
   }
   .temperature h3,
   .condition h3 ,
@@ -201,6 +206,8 @@ body {
 }
 .temperature, .condition, .humidity {
   flex: 1;
+  display: flex;
+  flex-wrap: wrap;
   padding: 22px;
   border-radius: 12px;
   background-color: rgba(32, 168, 226, 0.253);
@@ -210,7 +217,7 @@ body {
 }
 
 .temperature h3, .condition h3, .humidity h3 {
-  font-size: 20px;
+  font-size: 12px;
   color: #060505;
   margin-bottom: 10px;
 }
@@ -248,5 +255,32 @@ body {
       opacity: 1;
   }
 }
-  
+@media only screen and (max-width: 600px) {
+  /* Adjust styles for smaller screens */
+  .dark-button {
+    left: 0;
+    bottom: 0;
+    margin-top: 10px;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .header h1 {
+    font-size: 4vh;
+  }
+
+  .location h2 {
+    font-size: 3vh;
+  }
+
+  .search input {
+    width: 80%;
+  }
+
+  .temperature, .condition, .humidity {
+    padding: 15px;
+  }
+}
   
